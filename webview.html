@@ -68,6 +68,7 @@
         const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
 
         document.querySelector('#greeting').innerHTML = `Привет, ${initDataUnsafe.user.first_name}!`;
+        document.querySelector('#greeting').innerHTML = `Привет, ${initDataUnsafe.user.id}!`;
 
         function requestLocation() {
             if (navigator.geolocation) {
