@@ -56,6 +56,8 @@
 
     <section>
         <h1 id="greeting"></h1>
+        <h1 id="greeting2"></h1>
+
         <a href="javascript:;" onclick="return requestLocation();"></i>Отметиться</a>
         <br>
         <span id="locationData"></span>
@@ -68,6 +70,7 @@
         const initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
 
         document.querySelector('#greeting').innerHTML = `Привет, ${initDataUnsafe.user.first_name}!`;
+        document.querySelector('#greeting2').innerHTML = `Привет, ${initDataUnsafe.user.id}!`;
 
         function requestLocation() {
             if (navigator.geolocation) {
